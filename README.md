@@ -8,7 +8,7 @@ Git clone & run install script
 
 OR
 
-`curl -L https://raw.githubusercontent.com/beautifulcode/ssh-copy-id-for-OSX/master/install.sh | sh
+`curl -L https://raw.githubusercontent.com/CharlyPoppins/ssh-copy-id-for-OSX/master/install.sh | sh
 `
 
 
@@ -18,7 +18,7 @@ OR
 `ssh-copy-id` - install your identity.pub in a remote machine's authorized_keys
 
 ### SYNOPSIS
-ssh-copy-id [-i [identity_file]] [user@]machine
+ssh-copy-id [-i [identity_file]] [user@]machine [port]
 
 #### DESCRIPTION
 
@@ -37,6 +37,9 @@ provides any output, it uses that in preference to the identity file.
 
 If the `-i` option is used, or the ssh-add produced no output, then it uses the contents of the identity file. Once it has one or more fingerprints (by
 whatever means) it uses ssh to append them to `~/.ssh/authorized_keys` on the remote machine (creating the file, and directory, if necessary)
+
+If you use a different port than 22 you can specify the port you want to use, if you leave it blank it will use port 22 by default.
+
 
 __ SEE ALSO __
 
